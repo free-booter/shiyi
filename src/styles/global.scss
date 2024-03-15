@@ -1,0 +1,114 @@
+@import './variables.scss';
+
+// 公共flex布局样式
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-row-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-column-between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+
+:root {
+  --font-size-normal: 20px;
+  --font-size-midden: 16px;
+  --font-size-small: 14px;
+  --column-gap: 80px;
+  --feeds-columns: 5; // 一行显示的卡片数量
+  --horizontal: 32; // 卡片水平之间的间距
+  --vertical: 16; // 卡片垂直之间的间距
+  --note-card-corner-radius: 16px; // 卡片圆角
+}
+
+// 适配大屏幕
+@media screen and (min-width: 1728px) {
+  :root {
+    --font-size-normal: 20px;
+    --font-size-midden: 16px;
+    --font-size-small: 14px;
+    --column-gap: 80px;
+    --feeds-columns: 5;
+    --horizontal: 32;
+    --vertical: 16; // 卡片垂直之间的间距
+    --note-card-corner-radius: 16px;
+  }
+}
+@media screen and (min-width: 1192px) and (max-width: 1423px) {
+  :root {
+    --font-size-normal: 16px;
+    --font-size-midden: 14px;
+    --font-size-small: 12px;
+    --column-gap: 40px;
+    --feeds-columns: 4;
+    --horizontal: 24;
+    --vertical: 14; // 卡片垂直之间的间距
+    --note-card-corner-radius: 16px;
+  }
+}
+
+// 手机屏幕
+@media screen and (min-width: 960px) and (max-width: 1191px) {
+  :root {
+    --font-size-normal: 14px;
+    --font-size-midden: 12px;
+    --font-size-small: 10px;
+    --column-gap: 20px;
+    --feeds-columns: 3;
+    --horizontal: 24;
+    --vertical: 14; // 卡片垂直之间的间距
+    --note-card-corner-radius: 14px;
+  }
+}
+@media screen and (min-width: 696px) and (max-width: 959px) {
+  :root {
+    --font-size-normal: 14px;
+    --font-size-midden: 12px;
+    --font-size-small: 10px;
+    --column-gap: 20px;
+    --feeds-columns: 3;
+    --horizontal: 24;
+    --vertical: 14; // 卡片垂直之间的间距
+    --note-card-corner-radius: 12px;
+  }
+}
+@media screen and (max-width: 695px) {
+  :root {
+    --column-gap: 20px;
+    --feeds-columns: 2;
+    --horizontal: 12;
+    --vertical: 12; // 卡片垂直之间的间距
+    --note-card-corner-radius: 12px;
+  }
+}
+
+body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  font-size: var(--font-size-normal);
+  color: $--color-main-text;
+  background: $--color-main-bg-dark;
+}

@@ -1,0 +1,28 @@
+$--color-main-bg: #3165FB;
+$--color-main-bg-dark: #000000;
+$--color-bg-1: rgba(204, 204, 204, 0.2);
+$--color-bg-black-light: #1D1D1D;
+$--color-main-text: #ffffff;
+$--color-text-2: #F6F7F9;
+$--color-text-3: #A1A1A1;
+$--color-text-4: #FF8D1A;
+$--color-placeholder: rgba(255, 255, 255, 0.43);
+
+$--hover-bg: hsla(0, 0%, 100%, 0.04);
+$--border-color-light: #363637;
+
+
+
+@function vw($px) {
+  @return calc($px / 1400) * 100vw;
+}
+
+@function vh($px) {
+  @return calc($px / 1080) * 100vh;
+}
+
+
+
+
+
+
